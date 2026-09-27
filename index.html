@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Akmaral Zhumabay | Portfolio </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Task 0 - Navigation Bar using Flexbox -->
+<header class="navbar">
+  <div class="logo"> az. </div>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#home"> Home </a></li>
+      <li><a href="#cards"> Skills </a></li>
+      <li><a href="#gallery"> Gallery </a></li>
+      <li><a href="#portfolio"> Portfolio </a></li>
+      <li><a href="#contact"> Contact </a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<main class="page-wrapper">
+
+  <!-- Introduction -->
+  <section class="task-section" id="home">
+    <h1> Advanced CSS - Flexbox & Grid </h1>
+    <p> Hello! My name is Akmaral Zhumabay. I am a Software Engineering student from group SE-2517. This webpage demonstrates my work with modern CSS layout techniques, including Flexbox and CSS Grid. </p>
+  </section>
+
+
+  <!-- Task 1 - Card Row (Flexbox) -->
+  <section class="task-section" id="cards">
+
+    <h2> Task 1. Card Row </h2>
+    <p> These cards represent some of the my Interests: </p>
+
+    <div class="card-row">
+      <div class="card">
+        <div class="card-img img-placeholder-1"> </div>
+        <h3> 💻 Coding </h3>
+        <p> I enjoy coding and creating projects that help me improve my programming and problem-solving skills. </p>
+        <button class="btn">Learn more</button>
+      </div>
+
+
+      <div class="card">
+        <div class="card-img img-placeholder-2"> </div>
+        <h3> 🎨 Design </h3>
+        <p> I like creating clean and visually appealing designs and experimenting with different styles. </p>
+        <button class="btn">Learn more</button>
+      </div>
+
+
+      <div class="card">
+        <div class="card-img img-placeholder-3"> </div>
+        <h3> 🎮 Gaming </h3>
+        <p> I enjoy playing games in my free time to relax, have fun and explore different virtual worlds. </p>
+        <button class="btn">Learn more</button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Task 2 - Page Layout with Grid Areas -->
+  <section class="task-section">
+
+    <h2> Task 2. Page Layout with Grid Areas </h2>
+
+    <div class="grid-layout">
+
+      <header class="area-header">
+        <h3> Student Dashboard </h3>
+      </header>
+
+      <aside class="area-sidebar">
+        <h3> About Me </h3>
+        <p> Akmaral Zhumabay </p>
+        <p> Group: SE-2517 </p>
+        <p> Major: Software Engineering </p>
+      </aside>
+
+      <section class="area-main">
+        <h3> My Studies </h3>
+        <p> As a Software Engineering student, I study programming, databases, algorithms and web technologies. </p>
+        <p> In this assignment, I am practicing two important CSS layout systems: Flexbox and CSS Grid. </p>
+      </section>
+
+
+      <footer class="area-footer"> Advanced CSS Assignment #2
+      </footer>
+    </div>
+  </section>
+
+
+  <!-- Task 3 - Image Gallery -->
+  <section class="task-section" id="gallery">
+
+    <h2>Task 3. Image Gallery</h2>
+
+    <p> A responsive gallery created using CSS Grid. Hover over an image to display its caption. </p>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <div class="gallery-img img-1"></div>
+        <div class="caption"> Aktobe. Astana Park</div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-img img-2"></div>
+        <div class="caption"> Spring: Apple Blossoms </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-img img-3"></div>
+        <div class="caption"> Almaty. Sunset</div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-img img-4"></div>
+        <div class="caption"> Koktobe </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-img img-5"></div>
+        <div class="caption"> Samal Park </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-img img-6"></div>
+        <div class="caption"> Al-Farabi University </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-img img-7"></div>
+        <div class="caption"> Almaty: Night City </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-img img-8"></div>
+        <div class="caption"> Aktobe. Home </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-img img-9"></div>
+        <div class="caption"> Green </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Task 4 - Portfolio Page -->
+  <section class="task-section" id="portfolio">
+
+    <h2> Task 4. Portfolio Page </h2>
+    <div class="portfolio">
+
+      <!-- Flexbox Navigation -->
+      <header class="portfolio-header">
+
+        <div class="logo"> Akmaral's Portfolio </div>
+
+        <ul class="nav-links">
+          <li><a href="#home"> Home </a></li>
+          <li><a href="#portfolio"> Projects </a></li>
+          <li><a href="#about"> About </a></li>
+          <li><a href="#contact"> Contact </a></li>
+        </ul>
+      </header>
+
+
+      <!-- Grid Main Section -->
+      <div class="portfolio-main">
+
+        <!-- Projects Area -->
+        <div class="projects">
+          <div class="project-card">
+            <div class="card-img project-img-1"> </div>
+            <div class="project-info">
+              <h3> Web Development </h3>
+              <p> A web project created using HTML and CSS with responsive layouts and modern styling. </p>
+              <button class="btn"> View project </button>
+            </div>
+          </div>
+
+
+          <div class="project-card">
+            <div class="card-img project-img-2"> </div>
+            <div class="project-info">
+              <h3> Java Project </h3>
+              <p> A Java project created to practice object-oriented programming and application development. </p>
+              <button class="btn"> View project </button>
+            </div>
+          </div>
+
+
+          <div class="project-card">
+            <div class="card-img project-img-3"> </div>
+            <div class="project-info">
+              <h3> Database Project </h3>
+              <p> A database project focused on designing tables, relationships and working with SQL queries. </p>
+              <button class="btn"> View project </button>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Portfolio Sidebar -->
+        <aside class="portfolio-sidebar" id="about">
+
+          <h3> About Me </h3>
+          <p> My name is Akmaral Zhumabay. I am a Software Engineering student in group SE-2517. I am learning how to develop applications and create clean and responsive websites.
+          </p>
+
+          <h3> Skills </h3>
+
+          <ul class="skills-list">
+            <li> HTML </li>
+            <li> CSS </li>
+            <li> Flexbox </li>
+            <li> CSS Grid </li>
+            <li> Java </li>
+            <li> Python </li>
+            <li> SQL </li>
+          </ul>
+
+
+          <div id="contact">
+            <h3> Contact </h3>
+            <p> Software Engineering Student </p>
+            <p> Group SE-2517 </p>
+          </div>
+        </aside>
+      </div>
+
+
+      <footer class="portfolio-footer">
+        &copy; 2026 Akmaral Zhumabay. Advanced CSS Assignment.
+      </footer>
+
+    </div>
+  </section>
+</main>
+</body>
+</html>

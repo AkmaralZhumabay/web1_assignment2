@@ -1,0 +1,483 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #2b2b2b;
+  background: #f5f6fa;
+  line-height: 1.5;
+}
+
+.page-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.task-section {
+  background: #fff;
+  border: 1px solid #e1e1e8;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.task-section > p {
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  color: #2b2b45;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #3a3a5c;
+  border-bottom: 2px solid #6c63ff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.btn {
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: #574fd6;
+  transform: scale(1.03);
+}
+
+
+.img-placeholder-1,
+.img-placeholder-2,
+.img-placeholder-3 {
+  height: 140px;
+  border-radius: 6px 6px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+}
+
+.img-placeholder-1 {
+  background-image: url("images/card1.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.img-placeholder-2 {
+  background-image: url("images/card2.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.img-placeholder-3 {
+  background-image: url("images/card3.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* Task 0 - Navigation bar (Flexbox) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2b2b45;
+  color: #fff;
+  padding: 15px 30px;
+}
+
+.navbar .logo {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #a29bfe;
+}
+
+
+/* Task 1 - Card row (Flexbox) */
+.card-row {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 250px;
+  background: #fafaff;
+  border: 1px solid #e1e1e8;
+  border-radius: 8px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card h3,
+.card p,
+.card .btn {
+  margin: 10px 15px;
+}
+
+.card .btn {
+  margin-top: auto;
+  margin-bottom: 15px;
+  align-self: flex-start;
+}
+
+
+/* Task 2 - Grid page layout */
+.grid-layout {
+  display: grid;
+
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: auto minmax(220px, auto) auto;
+
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+
+  gap: 10px;
+  min-height: 350px;
+}
+
+.area-header {
+  grid-area: header;
+  background: #6c63ff;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.area-sidebar {
+  grid-area: sidebar;
+  background: #00b894;
+  color: #fff;
+
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.area-sidebar h3 {
+  margin-bottom: 15px;
+}
+
+.area-sidebar p {
+  margin-bottom: 10px;
+}
+
+.area-main {
+  grid-area: main;
+  background: #0984e3;
+  color: #fff;
+
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.area-main h3 {
+  margin-bottom: 15px;
+}
+
+.area-main p {
+  margin-bottom: 12px;
+}
+
+.area-footer {
+  grid-area: footer;
+  background: #2b2b45;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 18px;
+  border-radius: 6px;
+}
+
+
+/* Task 3 - Image gallery (CSS Grid) */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
+.gallery-img {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.img-1 {
+  background-image: url("images/photo1.jpg");
+}
+.img-2 {
+  background-image: url("images/photo2.jpg");
+}
+.img-3 {
+  background-image: url("images/photo3.jpg");
+}
+.img-4 {
+  background-image: url("images/photo4.jpg");
+}
+.img-5 {
+  background-image: url("images/photo5.jpg");
+}
+.img-6 {
+  background-image: url("images/photo6.jpg");
+}
+.img-7 {
+  background-image: url("images/photo7.jpg");
+}
+.img-8 {
+  background-image: url("images/photo8.jpg");
+}
+.img-9 {
+  background-image: url("images/photo9.jpg");
+}
+
+
+/* Caption overlay */
+.caption {
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+
+  text-align: center;
+  font-size: 14px;
+
+  padding: 8px 0;
+
+  opacity: 0;
+  transform: translateY(100%);
+
+  transition: all 0.25s ease;
+}
+
+
+/* Gallery hover effects */
+.gallery-item:hover .caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.05);
+}
+
+
+/* Task 4 - Portfolio section (Flexbox + CSS Grid) */
+.portfolio {
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+
+/* Portfolio navigation - Flexbox */
+.portfolio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #2b2b45;
+  color: #fff;
+
+  padding: 15px 25px;
+}
+
+.portfolio-header .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+/* Main portfolio section - CSS Grid */
+.portfolio-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+
+/* Projects */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+/* Individual project card - Flexbox */
+.project-card {
+  display: flex;
+  background: #fafaff;
+  border: 1px solid #e1e1e8;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.project-card .card-img {
+  width: 140px;
+  min-height: 150px;
+  flex-shrink: 0;
+  border-radius: 0;
+}
+
+.project-img-1,
+.project-img-2,
+.project-img-3 {
+  background-size: cover;
+  background-position: center;
+}
+
+.project-img-1 {
+  background-image: url("images/project1.webp");
+}
+.project-img-2 {
+  background-image: url("images/project2.jpg");
+}
+.project-img-3 {
+  background-image: url("images/project3.webp");
+}
+
+/* Project information */
+.project-info {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 8px;
+  flex: 1;
+}
+
+.project-info p {
+  margin-bottom: 10px;
+}
+
+.project-info .btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+
+/* Portfolio sidebar */
+.portfolio-sidebar {
+  background: #fafaff;
+  border: 1px solid #e1e1e8;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.portfolio-sidebar h3 {
+  margin-bottom: 8px;
+  color: #3a3a5c;
+}
+
+.portfolio-sidebar p {
+  margin-bottom: 15px;
+}
+
+
+/* Skills */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.skills-list li {
+  background: #6c63ff;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 12px;
+}
+
+
+/* Contact */
+#contact {
+  border-top: 1px solid #e1e1e8;
+  padding-top: 15px;
+}
+
+
+/* Footer */
+.portfolio-footer {
+  background: #2b2b45;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+}
